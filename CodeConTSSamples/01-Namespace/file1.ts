@@ -1,0 +1,3 @@
+﻿module SomeModule {
+    "use strict";
+}

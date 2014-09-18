@@ -1,4 +1,4 @@
-CodeCon2014TSSamples
+CodeCon 2014 TypeScript Samples
 ====================
 
-TS samples for CodeCon BA 2014
+TypeScript samples for CodeCon BA 2014
