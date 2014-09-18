@@ -67,6 +67,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="01-Namespace\HtmlPage1.html" />
+    <Content Include="02-NestedNamespace\HtmlPage1.html" />
+    <Content Include="04-NamespacesInSeparateFiles\HtmlPage1.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,11 +78,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="01-Namespace\file1.ts" />
     <TypeScriptCompile Include="02-NestedNamespace\file1.ts" />
-    <TypeScriptCompile Include="03-NamespacesInSeparateFiles\ISomeObject.d.ts" />
-    <TypeScriptCompile Include="03-NamespacesInSeparateFiles\ISomeOtherObject.ts" />
-    <TypeScriptCompile Include="03-NamespacesInSeparateFiles\SomeObject.ts" />
-    <TypeScriptCompile Include="04-Interface\code.ts" />
-    <TypeScriptCompile Include="04-Interface\ISomeObject.d.ts" />
+    <TypeScriptCompile Include="02-NestedNamespace\file2.ts" />
+    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\ISomeObject.d.ts" />
+    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\ISomeOtherObject.d.ts" />
+    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\SomeObject.ts" />
+    <TypeScriptCompile Include="03-Interface\code.ts" />
+    <TypeScriptCompile Include="03-Interface\ISomeObject.d.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
