@@ -3,3 +3,5 @@
         doSomething(): void;
     }
 }
+
+export = SomeModule;

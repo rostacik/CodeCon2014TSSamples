@@ -13,9 +13,10 @@ var list: number[] = [1, 2, 3];
 var list2: Array<number> = [1, 2, 3];
 
 //enum
-enum Color { Red, Green, Blue };
+enum Color { Red, Green, Blue, White };
 var c: Color = Color.Green;
 c = Color.Red;
+c = Color.White;
 
 //any
 var notSure: any = 4;
@@ -28,4 +29,7 @@ function warnUser(): void {
 
 function writeToConsole() {
     console.log('ha!');
+    return true;
 }
+
+//var r: number = writeToConsole();

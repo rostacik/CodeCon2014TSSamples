@@ -59,6 +59,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="07-AMDModuleSystem\HtmlPage1.html" />
+    <Content Include="07-AMDModuleSystem\main.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -69,9 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="04-Namespace\HtmlPage1.html" />
-    <Content Include="07-NestedNamespace\HtmlPage1.html" />
+    <Content Include="06-NestedNamespace\HtmlPage1.html" />
     <Content Include="05-NamespacesInSeparateFiles\HtmlPage1.html" />
-    <Content Include="05-NoModuleSystem\HtmlPage1.html" />
+    <Content Include="08-NoModuleSystem\HtmlPage1.html" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Web.config" />
@@ -83,21 +85,29 @@
     <TypeScriptCompile Include="01-BasicTypes\file1.ts" />
     <TypeScriptCompile Include="04-Namespace\file1.ts" />
     <TypeScriptCompile Include="02-ComplexTypes\file1.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\ambient\file1.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\ambient\ISomeObject.d.ts" />
-    <TypeScriptCompile Include="07-NestedNamespace\file1.ts" />
-    <TypeScriptCompile Include="07-NestedNamespace\file2.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\ambient\file1.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\ambient\ISomeObject.d.ts" />
+    <TypeScriptCompile Include="07-AMDModuleSystem\consumer.ts" />
+    <TypeScriptCompile Include="06-NestedNamespace\file1.ts" />
+    <TypeScriptCompile Include="06-NestedNamespace\file2.ts" />
     <TypeScriptCompile Include="05-NamespacesInSeparateFiles\ISomeObject.d.ts" />
     <TypeScriptCompile Include="05-NamespacesInSeparateFiles\ISomeOtherObject.d.ts" />
     <TypeScriptCompile Include="05-NamespacesInSeparateFiles\SomeObject.ts" />
     <TypeScriptCompile Include="03-Interface\code.ts" />
     <TypeScriptCompile Include="03-Interface\ISomeObject.d.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\file1.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\file2.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\file3.ts" />
-    <TypeScriptCompile Include="05-NoModuleSystem\subfolder\file1.ts" />
-    <TypeScriptCompile Include="06-AMDModuleSystem\ISomeInterface.d.ts" />
-    <TypeScriptCompile Include="06-AMDModuleSystem\SomeInterface.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\file1.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\file2.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\file3.ts" />
+    <TypeScriptCompile Include="08-NoModuleSystem\subfolder\file1.ts" />
+    <TypeScriptCompile Include="07-AMDModuleSystem\ISomeInterface.d.ts" />
+    <TypeScriptCompile Include="07-AMDModuleSystem\SomeClass.ts" />
+    <TypeScriptCompile Include="09-Classes\file1.ts" />
+    <TypeScriptCompile Include="09-Classes\file2.ts" />
+    <TypeScriptCompile Include="09-Classes\file3.ts" />
+    <TypeScriptCompile Include="09-Classes\file4.ts" />
+    <TypeScriptCompile Include="09-Classes\file5.ts" />
+    <TypeScriptCompile Include="10-Functions\file1.ts" />
+    <TypeScriptCompile Include="11-DefinitionMerge\file1.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
   </ItemGroup>
   <ItemGroup />
@@ -107,8 +117,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
     <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
