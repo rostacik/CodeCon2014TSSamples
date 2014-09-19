@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -67,28 +68,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="01-Namespace\HtmlPage1.html" />
-    <Content Include="02-NestedNamespace\HtmlPage1.html" />
-    <Content Include="04-NamespacesInSeparateFiles\HtmlPage1.html" />
+    <Content Include="04-Namespace\HtmlPage1.html" />
+    <Content Include="07-NestedNamespace\HtmlPage1.html" />
+    <Content Include="05-NamespacesInSeparateFiles\HtmlPage1.html" />
     <Content Include="05-NoModuleSystem\HtmlPage1.html" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="01-Namespace\file1.ts" />
-    <TypeScriptCompile Include="02-NestedNamespace\file1.ts" />
-    <TypeScriptCompile Include="02-NestedNamespace\file2.ts" />
-    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\ISomeObject.d.ts" />
-    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\ISomeOtherObject.d.ts" />
-    <TypeScriptCompile Include="04-NamespacesInSeparateFiles\SomeObject.ts" />
+    <TypeScriptCompile Include="01-BasicTypes\file1.ts" />
+    <TypeScriptCompile Include="04-Namespace\file1.ts" />
+    <TypeScriptCompile Include="02-ComplexTypes\file1.ts" />
+    <TypeScriptCompile Include="05-NoModuleSystem\ambient\file1.ts" />
+    <TypeScriptCompile Include="05-NoModuleSystem\ambient\ISomeObject.d.ts" />
+    <TypeScriptCompile Include="07-NestedNamespace\file1.ts" />
+    <TypeScriptCompile Include="07-NestedNamespace\file2.ts" />
+    <TypeScriptCompile Include="05-NamespacesInSeparateFiles\ISomeObject.d.ts" />
+    <TypeScriptCompile Include="05-NamespacesInSeparateFiles\ISomeOtherObject.d.ts" />
+    <TypeScriptCompile Include="05-NamespacesInSeparateFiles\SomeObject.ts" />
     <TypeScriptCompile Include="03-Interface\code.ts" />
     <TypeScriptCompile Include="03-Interface\ISomeObject.d.ts" />
     <TypeScriptCompile Include="05-NoModuleSystem\file1.ts" />
     <TypeScriptCompile Include="05-NoModuleSystem\file2.ts" />
     <TypeScriptCompile Include="05-NoModuleSystem\file3.ts" />
     <TypeScriptCompile Include="05-NoModuleSystem\subfolder\file1.ts" />
+    <TypeScriptCompile Include="06-AMDModuleSystem\ISomeInterface.d.ts" />
+    <TypeScriptCompile Include="06-AMDModuleSystem\SomeInterface.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -96,6 +106,10 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
